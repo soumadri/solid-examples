@@ -13,8 +13,4 @@ class DBDataStore implements DataStoreInterface
         echo "DB: Set data: " . $data . "\r\n";
     }
 
-    public function getURL() : string
-    {
-        return "";
-    }
 }

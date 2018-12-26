@@ -16,8 +16,8 @@ class EmployeeRecords
             echo "Please provide a value\r\n";
         } else {
             //HTTP storage implementation
-            //$dataStore = new HTTPDataStore();
-            $dataStore = new DBDataStore();
+            $dataStore = new HTTPDataStore();
+            //$dataStore = new DBDataStore();
             $recordsManager = new RecordManager($dataStore);
             $recordsManager->updateRecords($value["v"]);
         }
