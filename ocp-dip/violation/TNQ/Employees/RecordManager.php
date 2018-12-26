@@ -1,4 +1,5 @@
 <?php
+namespace TNQ\Employees;
 
 use TNQ\DataStorage\DataStorageManager;
 

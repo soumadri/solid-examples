@@ -1,12 +1,9 @@
 <?php 
 namespace TNQ\Employees;
 
-require_once 'autoloader.php';
+require_once dirname(__FILE__) . '/../../autoloader.php';
 
-use TNQ\DataStorage\DataStorageManager;    
-
-//$dataStore->setData("Some updated value");
-//echo $dataStore->getData();
+use TNQ\DataStorage\DataStorageManager;
 
 class EmployeeRecords
 {

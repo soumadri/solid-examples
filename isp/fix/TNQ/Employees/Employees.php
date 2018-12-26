@@ -1,7 +1,7 @@
 <?php 
 namespace TNQ\Employees;
 
-require_once 'autoloader.php';
+require_once dirname(__FILE__) . '/../../autoloader.php';
 
 use TNQ\DataStorage\HTTPDataStore;
 use TNQ\DataStorage\DBDataStore;
@@ -17,6 +17,7 @@ class EmployeeRecords
         } else {
             //HTTP storage implementation
             $dataStore = new HTTPDataStore();
+            //$dataStore = new DBDataStore();
             $recordsManager = new RecordManager($dataStore);
             $recordsManager->updateRecords($value["v"]);
         }

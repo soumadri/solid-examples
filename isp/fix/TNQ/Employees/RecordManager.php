@@ -1,6 +1,8 @@
 <?php
+namespace TNQ\Employees;
 
 use TNQ\DataStorage\DataStoreInterface;
+use TNQ\DataStorage\HTTPDataStore;
 
 class RecordManager
 {
@@ -12,6 +14,10 @@ class RecordManager
     public function updateRecords($data)
     {
         $this->dataStore->setData($data);
+
+        //..do some processing of data based on the URL
+        $this->dataStore->getURL();
+
     }
 }
 

@@ -1,9 +1,10 @@
 <?php 
 namespace TNQ\Employees;
 
-require_once 'autoloader.php';
+require_once dirname(__FILE__) . '/../../autoloader.php';
 
-use TNQ\DataStorage\DataStorageManager;
+use TNQ\DataStorage\HTTPDataStore;
+use TNQ\DataStorage\DBDataStore;
 
 class EmployeeRecords
 {
@@ -14,8 +15,9 @@ class EmployeeRecords
         if ($value["v"] == "") {
             echo "Please provide a value\r\n";
         } else {
-            //Store the data to backend            
-            $dataStore = new DataStorageManager();
+            //HTTP storage implementation
+            //$dataStore = new HTTPDataStore();
+            $dataStore = new DBDataStore();
             $recordsManager = new RecordManager($dataStore);
             $recordsManager->updateRecords($value["v"]);
         }
