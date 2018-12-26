@@ -1,4 +1,6 @@
 <?php 
+namespace TNQ\Employees;
+
 require_once 'autoloader.php';
 
 use TNQ\DataStorage\DataStorageManager;

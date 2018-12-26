@@ -1,4 +1,6 @@
 <?php 
+namespace TNQ\Employees;
+
 class EmployeeRecords
 {
     private static function storeData($data)
@@ -13,6 +15,8 @@ class EmployeeRecords
         if ($value["v"] == "") {
             echo "Please provide a value\r\n";
         } else {
+            //Do some processing
+
             //Store the data to backend
             self::storeData($value["v"]);
         }
