@@ -6,8 +6,8 @@ class DBDataStore implements DataStoreInterface
     public function getData()
     {
         return array(
-            "1"=>"Val1",
-            "2"=>"Val2"
+            "1" => "Val1",
+            "2" => "Val2"
         );
     }
 

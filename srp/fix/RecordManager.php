@@ -12,7 +12,7 @@ class RecordManager
     public function updateRecords($data)
     {
         //...some processing of data
-        
+
         $this->dataStore->setData($data);
     }
 }

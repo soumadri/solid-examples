@@ -1,4 +1,4 @@
-<?php    
+<?php 
 class EmployeeRecords
 {
     private static function storeData($data)
@@ -8,18 +8,15 @@ class EmployeeRecords
 
     public static function updateEmployee()
     {
-        $value = getopt("v:");        
+        $value = getopt("v:");
 
-        if($value["v"] == "")
-        {
+        if ($value["v"] == "") {
             echo "Please provide a value\r\n";
-        }
-        else
-        {
+        } else {
             //Store the data to backend
             self::storeData($value["v"]);
         }
-    }    
+    }
 }
 
 EmployeeRecords::updateEmployee();

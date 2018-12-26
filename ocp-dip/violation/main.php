@@ -1,20 +1,17 @@
-<?php    
-require_once 'autoloader.php';  
+<?php 
+require_once 'autoloader.php';
 
-use TNQ\DataStorage\DataStorageManager;    
+use TNQ\DataStorage\DataStorageManager;
 
 class EmployeeRecords
 {
     public static function updateEmployee()
     {
-        $value = getopt("v:");        
+        $value = getopt("v:");
 
-        if($value["v"] == "")
-        {
+        if ($value["v"] == "") {
             echo "Please provide a value\r\n";
-        }
-        else
-        {
+        } else {
             //Store the data to backend            
             $dataStore = new DataStorageManager();
             $recordsManager = new RecordManager($dataStore);

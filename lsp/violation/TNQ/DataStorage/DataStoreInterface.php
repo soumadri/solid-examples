@@ -5,5 +5,5 @@ interface DataStoreInterface
 {
     public function getData();
 
-    public function setData($data);    
+    public function setData($data);
 }

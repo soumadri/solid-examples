@@ -3,17 +3,17 @@ namespace TNQ\DataStorage;
 
 class DBDataStore implements DataStoreInterface
 {
-    public function getData(): string
+    public function getData() : string
     {
         return "DB: Get data";
     }
 
     public function setData(string $data)
     {
-        echo "DB: Set data: " . $data . "\r\n";        
+        echo "DB: Set data: " . $data . "\r\n";
     }
 
-    public function getURL(): string
+    public function getURL() : string
     {
         return "";
     }

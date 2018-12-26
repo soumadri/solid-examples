@@ -11,5 +11,5 @@ class FTPDataStore implements DataStoreInterface
     public function setData($data)
     {
         echo "FTP: Set data: " . $data . "\r\n";
-    }    
+    }
 }

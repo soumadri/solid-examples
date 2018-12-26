@@ -3,7 +3,7 @@ namespace TNQ\DataStorage;
 
 interface NetworkStoreInterface extends DataStoreInterface
 {
-        
-    public function getURL(): string;
+
+    public function getURL() : string;
 
 }

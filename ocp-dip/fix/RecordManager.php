@@ -10,7 +10,7 @@ class RecordManager
     }
 
     public function updateRecords($data)
-    {        
+    {
         $this->dataStore->setData($data);
     }
 }

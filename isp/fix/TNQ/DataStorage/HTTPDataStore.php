@@ -3,7 +3,7 @@ namespace TNQ\DataStorage;
 
 class HTTPDataStore implements DataStoreInterface
 {
-    public function getData(): string
+    public function getData() : string
     {
         return "HTTP: Get data\r\n";
     }
@@ -11,9 +11,9 @@ class HTTPDataStore implements DataStoreInterface
     public function setData(string $data)
     {
         echo "HTTP: Set data: " . $data . "\r\n";
-    }  
-    
-    public function getURL(): string
+    }
+
+    public function getURL() : string
     {
         return "Some HTTP URL";
     }
