@@ -1,9 +1,9 @@
 <?php
 namespace TNQ\DataStorage;
 
-use TNQ\DataStorage\IDataStore;
-
-interface IDBDataStore extends IDataStore
+interface DBStoreInterface extends DataStoreInterface
 {
+        
     public function getConnectionString(): string;
+
 }

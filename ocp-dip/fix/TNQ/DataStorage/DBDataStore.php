@@ -1,7 +1,7 @@
 <?php
 namespace TNQ\DataStorage;
 
-class DBDataStore implements IDataStore
+class DBDataStore implements DataStoreInterface
 {
     public function getData()
     {

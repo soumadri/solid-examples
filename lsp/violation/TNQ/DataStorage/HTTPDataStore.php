@@ -1,7 +1,7 @@
 <?php
 namespace TNQ\DataStorage;
 
-class HTTPDataStore implements IDataStore
+class HTTPDataStore implements DataStoreInterface
 {
     public function getData()
     {
@@ -13,10 +13,8 @@ class HTTPDataStore implements IDataStore
         echo "HTTP: Set data: " . $data . "\r\n";
     }  
     
-    
     public function getURL()
     {
-        return "HTTP: Some URL";
+        return "Some HTTP URL";
     }
-    
 }

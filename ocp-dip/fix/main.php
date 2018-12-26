@@ -18,7 +18,6 @@ class EmployeeRecords
         {
             //HTTP storage implementation
             $dataStore = new HTTPDataStore();
-            //$dataStore = new DBDataStore();
             $recordsManager = new RecordManager($dataStore);
             $recordsManager->updateRecords($value["v"]);
         }

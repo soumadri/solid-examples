@@ -1,16 +1,28 @@
 <?php    
-    require_once 'autoloader.php';  
+require_once 'autoloader.php';  
 
-    use TNQ\DataStorage\HTTPDataStore;
-    use TNQ\DataStorage\DBDataStore;  
+use TNQ\DataStorage\HTTPDataStore;
+use TNQ\DataStorage\DBDataStore;  
 
-    $dataStore = new DBDataStore();
-    $dataStore->getData();
+class EmployeeRecords
+{
+    public static function updateEmployee()
+    {
+        $value = getopt("v:");        
 
-    $recordManager = new RecordManager();
-    $recordManager->updateRecords($dataStore, "Updated value");
+        if($value["v"] == "")
+        {
+            echo "Please provide a value\r\n";
+        }
+        else
+        {
+            //HTTP storage implementation
+            $dataStore = new HTTPDataStore();
+            //$dataStore = new DBDataStore();
+            $recordsManager = new RecordManager($dataStore);
+            $recordsManager->updateRecords($value["v"]);
+        }
+    }
+}
 
-    $dataStore = new HTTPDataStore();    
-    
-    $recordManager->updateRecords($dataStore, "Updated value");
-    
+EmployeeRecords::updateEmployee();

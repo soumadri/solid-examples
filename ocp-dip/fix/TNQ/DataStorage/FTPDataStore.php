@@ -1,7 +1,7 @@
 <?php
 namespace TNQ\DataStorage;
 
-class FTPDataStore implements IDataStore
+class FTPDataStore implements DataStoreInterface
 {
     public function getData()
     {

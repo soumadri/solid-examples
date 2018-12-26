@@ -1,20 +1,20 @@
 <?php
 namespace TNQ\DataStorage;
 
-class FTPDataStore implements INetworkDataStore
+class FTPDataStore implements NetworkStoreInterface
 {
-    public function getData()
+    public function getData(): string
     {
         return "FTP: Get data";
     }
 
-    public function setData($data)
+    public function setData(string $data)
     {
         echo "FTP: Set data: " . $data . "\r\n";
-    }   
-    
-    public function getURL()
+    }    
+
+    public function getURL(): string
     {
-        return "FTP: Some URL";
+        return "FTP: Some FTP URL";
     }
 }

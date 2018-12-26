@@ -1,25 +1,20 @@
 <?php
 namespace TNQ\DataStorage;
 
-class DBDataStore implements IDataStore
+class DBDataStore implements DataStoreInterface
 {
-    public function getData()
+    public function getData(): string
     {
-        echo array(
-            "1" => "val1",
-            "2" => "val2"
-        );
+        return "DB: Get data";
     }
 
-    public function setData($data)
+    public function setData(string $data)
     {
-        echo "DB: Set data: " . $data . "\r\n";
+        echo "DB: Set data: " . $data . "\r\n";        
     }
 
-    //Irrelevant for databases
-    public function getURL()
+    public function getURL(): string
     {
         return "";
     }
-
 }

@@ -1,8 +1,7 @@
 <?php    
 require_once 'autoloader.php';  
 
-use TNQ\DataStorage\HTTPDataStore;
-use TNQ\DataStorage\DBDataStore;  
+use TNQ\DataStorage\DataStorageManager;    
 
 class EmployeeRecords
 {
@@ -16,9 +15,8 @@ class EmployeeRecords
         }
         else
         {
-            //HTTP storage implementation
-            $dataStore = new HTTPDataStore();
-            //$dataStore = new DBDataStore();
+            //Store the data to backend            
+            $dataStore = new DataStorageManager();
             $recordsManager = new RecordManager($dataStore);
             $recordsManager->updateRecords($value["v"]);
         }

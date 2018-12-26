@@ -1,7 +1,7 @@
 <?php
 namespace TNQ\DataStorage;
 
-class FTPDataStore implements IDataStore
+class FTPDataStore implements DataStoreInterface
 {
     public function getData()
     {
@@ -12,4 +12,9 @@ class FTPDataStore implements IDataStore
     {
         echo "FTP: Set data: " . $data . "\r\n";
     }    
+
+    public function getURL()
+    {
+        return "Some HTTP URL";
+    }
 }

@@ -1,11 +1,11 @@
 <?php
 namespace TNQ\DataStorage;
 
-interface IDataStore
+interface DataStoreInterface
 {
     public function getData(): string;
 
-    public function setData($data): void;
+    public function setData(string $data);
     
     public function getURL(): string;
 }
