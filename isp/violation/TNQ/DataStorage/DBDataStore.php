@@ -17,4 +17,9 @@ class DBDataStore implements DataStoreInterface
     {
         return "";
     }
+
+    public function getConnectionString(): string
+    {
+        return "DB: Some connection string";
+    }
 }

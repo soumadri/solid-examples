@@ -12,12 +12,8 @@ class RecordManager
     }
 
     public function updateRecords($data)
-    {        
+    {
         $this->dataStore->setData($data);
-
-        //..do some processing of data based on the URL
-        $this->dataStore->getURL();
-
     }
 }
 

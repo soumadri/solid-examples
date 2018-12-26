@@ -8,8 +8,9 @@ class HTTPDataStore implements DataStoreInterface
         return "HTTP: Get data\r\n";
     }
 
-    public function setData($data)
+    public function setData(string $data)
     {
+        //...Convert to JSON and then store
         echo "HTTP: Set data: " . $data . "\r\n";
     }
 

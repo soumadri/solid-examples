@@ -8,4 +8,6 @@ interface DataStoreInterface
     public function setData(string $data);
 
     public function getURL() : string;
+
+    public function getConnectionString() : string;
 }

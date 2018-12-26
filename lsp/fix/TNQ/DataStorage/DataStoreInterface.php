@@ -6,6 +6,5 @@ interface DataStoreInterface
     public function getData() : string;
 
     public function setData(string $data);
-
-    public function getURL() : string;
+    
 }

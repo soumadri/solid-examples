@@ -10,7 +10,13 @@ class HTTPDataStore implements DataStoreInterface
 
     public function setData($data)
     {
-        echo "HTTP: Set data: " . $data . "\r\n";
+        $json = json_decode($data);
+
+        if ($json !== null) {
+            echo "HTTP: Set data: " . $data . "\r\n";
+        } else {
+            echo "HTTP: Set data: Data not updated\r\n";
+        }
     }
 
     public function getURL()

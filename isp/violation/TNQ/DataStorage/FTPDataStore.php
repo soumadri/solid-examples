@@ -17,4 +17,9 @@ class FTPDataStore implements DataStoreInterface
     {
         return "Some HTTP URL";
     }
+
+    public function getConnectionString(): string
+    {
+        return "";
+    }
 }
